@@ -11,3 +11,14 @@ class Counter(models.Model):
         self.count += 1
         self.save()
         return self.count
+
+    def decrement(self):
+        self.count -= 1
+        self.save()
+        return self.count
+
+    def reset(self):
+        self.count = 0
+        self.save()
+        return self.count
+

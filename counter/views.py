@@ -19,3 +19,9 @@ def index(request):
 
     if request.method == 'POST':
         return JsonResponse({'count': counter.increment()})
+
+    if request.method == 'DELETE':
+        return JsonResponse({'count': counter.reset()})
+
+    if request.method == 'PUT':
+        return JsonResponse({'count': counter.decrement()})
